@@ -4,8 +4,9 @@ import "html/template"
 
 // Current versions of some dependencies.
 const (
-	ReactVersion  = "0.12.2"
+	ReactVersion  = "0.14.0"
 	JQueryVersion = "2.1.3"
+	BabelCoreVersion = "5.8.23"
 )
 
 var contents map[string]*content
