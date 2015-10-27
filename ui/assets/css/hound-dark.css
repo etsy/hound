@@ -1,0 +1,132 @@
+body {
+  color: #ffffff;
+  background-color: #222222;
+}
+
+a {
+  color: #00bc8c;
+}
+
+.link-gray {
+  color: #fefefe;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border-color: #00bc8c;
+  box-shadow: 0 0 5px rgba(0,153,255,.5);
+}
+
+button {
+  color: #fff;
+  background-color: #00bc8c;
+}
+
+button:focus {
+  box-shadow: 0 0 6px rgba(0,153,255,.75);
+}
+
+/* Search input */
+#ina > input {
+  color: #ffffff;
+  background-color: #464545;
+}
+
+#inb {
+  color: #fefefe;
+  background-color: #464545;
+}
+
+#adv > .field > label {
+  /* Media object left */
+  color: #fefefe;
+}
+
+#adv > .field input[type=text] {
+  color: #666;
+}
+
+.multiselect {
+  color: #666;
+}
+
+#inb > .ban > em {
+  color: #fefefe;
+}
+
+#input > .stats {
+  color: #fefefe;
+}
+
+#no-result {
+  color: #fff;
+}
+
+#no-result.error {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+}
+
+.repo > .title {
+  color: #fefefe;
+}
+
+.repo > .title > .octicon-repo {
+  color: #fefefe;
+}
+
+.file {
+  border: 1px solid #d8d8d8;
+}
+
+.file > .title {
+  background-color: #464545;
+}
+
+.title a {
+  color: #fefefe;
+}
+
+.match {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.match:first-child {
+  border-top: 1px solid #d8d8d8;
+}
+
+.match:last-child {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.match > .line > .lnum {
+  border-right: 1px solid #eee;
+  color: #fefefe;
+  background-color: #464545;
+}
+
+.match > .line > .lnum:hover {
+  background-color: #2c2c2c;
+}
+
+.match > .line > .lval > em {
+  color: #fff;
+  background-color: rgba(0, 188, 140, 1);
+}
+
+.table-container th {
+  background-color: #464545;
+}
+
+.table-container .list td {
+  border: 1px solid #464545;
+}
+
+.repo-button.selected {
+  background-color: #375a7f;
+}

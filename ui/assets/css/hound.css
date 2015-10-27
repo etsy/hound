@@ -1,27 +1,14 @@
-
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-  background-color: #fff;
 }
-
-a {
-  color: #09f;
-}
-
-.link-gray { color: #aaa }
 
 input {
   font-family: inherit;
-  background-color: #fff;
-  border: 1px solid #ccc;
 }
 
 input:focus {
   outline: none;
-  border-color: #09f;
-  box-shadow: 0 0 5px rgba(0,153,255,.5);
 }
 
 button {
@@ -29,23 +16,16 @@ button {
   font-size: 14px;
   text-align: center;
   display: inline-block;
-  color: #fff;
-  background-color: #09f;
   border: 0;
   border-radius: 3px;
   cursor: pointer;
 }
 
-button:focus {
-  box-shadow: 0 0 6px rgba(0,153,255,.75);
-}
-
 #root {
-  max-width: 960px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px 20px 20px;
 }
-
 
 #input {
   margin-top: 40px;
@@ -58,7 +38,6 @@ button:focus {
   width: 100%;
   position: relative;
   z-index: 1;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
 }
 
 /* Search input */
@@ -68,7 +47,6 @@ button:focus {
   border-right: 0;
   border-radius: 3px 0 0 3px;
   box-sizing: border-box;
-  color: #666;
   font-size: 18px;
   font-weight: 300;
   display: table-cell;
@@ -100,11 +78,9 @@ button:focus {
   padding: 4px 8px;
   position: relative;
   box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-  color: #aaa;
   font-size: 12px;
   line-height: 24px;
   cursor: pointer;
-  background-color: #fff;
 }
 
 #adv {
@@ -116,7 +92,7 @@ button:focus {
 }
 
 .hide-adv {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* Media object clearfix */
@@ -128,7 +104,6 @@ button:focus {
   /* Media object left */
   float: left;
   width: 90px;
-  color: #999;
 }
 
 #adv > .field > .field-input {
@@ -141,7 +116,6 @@ button:focus {
   box-sizing: border-box;
   width: 100%;
   padding: 0 10px;
-  color: #666;
 }
 
 .multiselect {
@@ -150,7 +124,6 @@ button:focus {
   margin-top:5px;
   padding:5px;
   border: 1px solid #ccc;
-  color: #666;
 }
 
 #inb > .ban {
@@ -161,7 +134,6 @@ button:focus {
 
 #inb > .ban > em {
   font-style: normal;
-  color: #aaa;
 }
 
 #input > .stats {
@@ -169,7 +141,6 @@ button:focus {
   font-size: 12px;
   padding: 4px 0;
   margin: 0 auto;
-  color: #aaa;
 }
 
 /* Clearfix .stats */
@@ -182,8 +153,12 @@ button:focus {
   clear: both;
 }
 
-.stats-left { float: left }
-.stats-right { float: right }
+.stats-left {
+  float: left
+}
+.stats-right {
+  float: right
+}
 
 #input > .stats .val,
 #input > .stats a {
@@ -196,8 +171,7 @@ button:focus {
   font-size: 24px;
   text-align: center;
   margin-top: 100px;
-  color: #999;
-  text-shadow: 1px 1px 0 #fff;
+  color: #fff;
 }
 
 #no-result > div {
@@ -221,7 +195,6 @@ button:focus {
 }
 
 .repo > .title {
-  color: #666;
   font-size: 24px;
   padding-bottom: 5px;
 }
@@ -231,7 +204,6 @@ button:focus {
 }
 
 .repo > .title > .octicon-repo {
-  color: #bbb;
   margin-right: 10px;
 }
 
@@ -244,35 +216,17 @@ button:focus {
 .file {
   margin: 10px 0 20px;
   border-radius: 3px;
-  border: 1px solid #d8d8d8;
 }
 
 .file > .title {
   padding: 10px 10px 10px 20px;
   display: block;
   line-height: 30px;
-  background-color: #f5f5f5;
-}
-
-.title a {
-  color: #666;
 }
 
 .file-body {
   /* Allow horizontal scrolling in code, similar to github.com */
   overflow: auto;
-}
-
-.match {
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.match:first-child {
-  border-top: 1px solid #d8d8d8;
-}
-
-.match:last-child {
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .match > .line {
@@ -285,10 +239,8 @@ button:focus {
   width: 40px;
   text-align: right;
   padding: 3px 5px 3px 0;
-  border-right: 1px solid #eee;
   display: inline-block;
   font-size: 14px;
-  color: #aaa;
 }
 
 .match > .line:last-child > .lnum {
@@ -301,7 +253,6 @@ button:focus {
 
 .match > .line > .lnum:hover {
   text-decoration: underline;
-  background-color: #eee;
 }
 
 .match > .line > .lval {
@@ -315,8 +266,7 @@ button:focus {
 .match > .line > .lval > em {
   font-style: normal;
   font-weight: bold;
-  color: #333;
-  background-color: rgba(255,255,140,0.5);
+  padding: 2px 5px;
 }
 
 .table-container table {
@@ -325,14 +275,12 @@ button:focus {
 }
 
 .table-container th {
-  background-color: #eee;
   padding: 10px;
   text-align: left;
 }
 
 .table-container .list td {
   padding:5px;
-  border: 1px solid #eee
 }
 
 .table-container .list .reason {
@@ -343,8 +291,8 @@ button:focus {
   margin:0 5px 5px 0;
 }
 
-.repo-button.selected {
-  background-color: gray;
+.repo-button:focus, .repo-button:active {
+  outline: none;
 }
 
 #excluded_container {
@@ -352,3 +300,6 @@ button:focus {
   margin-bottom: 40px;
 }
 
+.change-theme {
+  cursor: pointer;
+}
