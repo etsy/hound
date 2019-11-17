@@ -1,6 +1,10 @@
-import {UrlToRepo} from './common';
+import React from 'react';
+import createReactClass from 'create-react-class';
+import ReactDOM from 'react-dom';
+import reqwest from 'reqwest';
+import { UrlToRepo } from './common';
 
-var ExcludedRow = React.createClass({
+var ExcludedRow = createReactClass({
   render: function() {
     var url = UrlToRepo(this.props.repo, this.props.file.Filename, this.props.rev);
     return (
@@ -14,7 +18,7 @@ var ExcludedRow = React.createClass({
   }
 });
 
-var ExcludedTable = React.createClass({
+var ExcludedTable = createReactClass({
   render: function() {
     var _this = this;
     if (this.props.searching) {
@@ -40,7 +44,7 @@ var ExcludedTable = React.createClass({
   }
 });
 
-var RepoButton = React.createClass({
+var RepoButton = createReactClass({
   handleClick: function(repoName) {
     this.props.onRepoClick(repoName);
   },
@@ -58,12 +62,12 @@ var RepoButton = React.createClass({
   }
 });
 
-var RepoList = React.createClass({
+var RepoList = createReactClass({
   render: function() {
     var repos = [],
         _this = this;
-    this.props.repos.forEach(function(repo){
-      repos.push(<RepoButton repo={repo} onRepoClick={_this.props.onRepoClick} currentRepo={_this.props.repo} />);
+    this.props.repos.forEach(function(repo, index){
+      repos.push(<RepoButton key={"repo-list-" + index} repo={repo} onRepoClick={_this.props.onRepoClick} currentRepo={_this.props.repo} />);
     });
 
     return (
@@ -74,12 +78,12 @@ var RepoList = React.createClass({
   }
 });
 
-var FilterableExcludedFiles = React.createClass({
+var FilterableExcludedFiles = createReactClass({
   getInitialState: function() {
     var _this = this;
-    $.ajax({
+    reqwest({
       url: 'api/v1/repos',
-      dataType: 'json',
+      type: 'json',
       success: function(data) {
         _this.setState({ repos: data });
       },
@@ -102,11 +106,10 @@ var FilterableExcludedFiles = React.createClass({
       searching: true,
       repo: this.state.repos[repo],
     });
-    $.ajax({
+    reqwest({
       url: 'api/v1/excludes',
       data: {repo: repo},
-      type: 'GET',
-      dataType: 'json',
+      type: 'json',
       success: function(data) {
         _this.setState({ files: data, searching: false });
       },
@@ -132,7 +135,7 @@ var FilterableExcludedFiles = React.createClass({
   }
 });
 
-React.renderComponent(
+ReactDOM.render(
   <FilterableExcludedFiles />,
   document.getElementById('root')
 );

@@ -95,8 +95,6 @@ func renderForDev(w io.Writer, root string, c *content, cfg *config.Config, r *h
 	}
 
 	return c.tpl.Execute(w, map[string]interface{}{
-		"ReactVersion":  ReactVersion,
-		"jQueryVersion": JQueryVersion,
 		"ReposAsJson":   json,
 		"Source":        html_template.HTML(buf.String()),
 		"Host":          r.Host,
@@ -155,8 +153,6 @@ func renderForPrd(w io.Writer, c *content, cfgJson string, r *http.Request) erro
 	buf.WriteString("</script>")
 
 	return c.tpl.Execute(w, map[string]interface{}{
-		"ReactVersion":  ReactVersion,
-		"jQueryVersion": JQueryVersion,
 		"ReposAsJson":   cfgJson,
 		"Source":        html_template.HTML(buf.String()),
 		"Host":          r.Host,
